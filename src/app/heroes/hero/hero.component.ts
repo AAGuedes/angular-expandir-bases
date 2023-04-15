@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
-  public name: string = 'ironman';
+  public name: string = 'Ironman';
   public age: number = 45;
 
   get capitalizedName(): string {
@@ -16,6 +16,14 @@ export class HeroComponent {
 
   getHeroDescription(): string {
     return ` ${ this.name } - ${ this.age }`;
+  }
+
+  changeHero(): void {
+    (this.name === 'Ironman') ? this.name = 'Spiderman' : this.name = 'Ironman';
+  }
+
+  changeAge(): void {
+    this.age = Math.floor(Math.random() * 100) + 1;
   }
 
 }
