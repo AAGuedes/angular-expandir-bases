@@ -19,11 +19,15 @@ export class HeroComponent {
   }
 
   changeHero(): void {
-    (this.name === 'Ironman') ? this.name = 'Spiderman' : this.name = 'Ironman';
+    this.name = 'Spiderman';
   }
 
   changeAge(): void {
     this.age = Math.floor(Math.random() * 100) + 1;
   }
 
+  resetForm(): void {
+    this.name = 'Ironman';
+    this.age = 45;
+  }
 }
