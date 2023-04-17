@@ -23,6 +23,14 @@ export class MainPageComponent {
   ];
 
   onNewCharacter(character: Character): void {
-    console.log(character);
+    let newCharacter: Character = {
+      name: character.name,
+      power: character.power
+    }
+    this.characters.push(newCharacter);
+  }
+
+  onDelete(id: number): void {
+    this.characters.splice(id, 1);
   }
 }
